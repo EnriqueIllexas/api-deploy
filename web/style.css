@@ -1,0 +1,157 @@
+*{
+    padding: 0;
+    margin: 0;
+  }
+  
+  ::-webkit-scrollbar{
+    width: 1em;
+}
+::-webkit-scrollbar-track{
+    background: #080f28;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(rgb(16, 48, 91), #2277a2, #9fd6ff);
+    transition: 1s;
+
+}
+main{
+    display: flex;;
+}
+#main-peliculas{
+    width: 70vw;
+    background-color:#142946;
+    padding-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow:scroll;
+    gap: 50px;
+    }
+.title{
+  color: aliceblue;
+  position: absolute;
+  z-index: 3;
+  font-size: 2rem;
+  text-wrap: nowrap;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  width: 70vw;
+  padding-top: 30px;
+  text-align: center;
+}
+  article {
+    padding-top: 20px;
+    place-content: center;
+    place-items: center;
+    display: grid;
+  }
+  img {
+    height: 300px;
+    width: 180px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow:  20px 20px 60px #11233c,
+             -20px -20px 60px #1e395f;
+  }
+  .title-movie{
+    color:#fff;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-indent: 2em hanging;
+text-indent: 2em each-line;
+text-indent: 2em hanging each-line;
+    text-wrap: nowrap;
+  }
+  .year-movie{
+    position: absolute;
+    z-index: 3;
+    font-size: .75rem;
+    font-weight: 700;
+    background-color: #007aff;
+    padding: 0.1rem 0.5rem;
+    line-height: 1.2rem;
+    border-radius: 1rem;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 160px;
+    margin-left: 120px;
+   
+  }
+      button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #183153;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+  }
+  button:after {
+    content: " ";
+    width: 0%;
+    height: 100%;
+    background: #ffd401;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    right: 0;
+  }
+  button:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+  }
+  button span {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 18px 25px;
+    color: #fff;
+    font-size: 1.125em;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    z-index: 20;
+    transition: all 0.3s ease-in-out;
+  }
+  button:hover span {
+    color: #183153;
+    animation: scaleUp 0.3s ease-in-out;
+  }
+  @keyframes scaleUp {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(0.95);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  /*_______bar left________--*/
+
+#left-peliculas{
+    background-color: #080f28;
+    width: 30vw;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    height: 100vh;
+
+}
+#left-peliculas h2{
+    color: #8DA0BC;
+    display: block;
+    font-size: 1rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
